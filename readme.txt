@@ -19,3 +19,7 @@ start to code with Python.
 use git to store your coding progress and document.
 
 ********************************************************************************************************************
+<<<<<<< HEAD
+
+=======
+>>>>>>> bc7d0d3f77999c737a21ded173ee44186cb8ccc5
