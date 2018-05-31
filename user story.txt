@@ -1,8 +1,5 @@
 user story:
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
 As a housewife, I wanna know how many pails I can put into a case with some small sticks and let the balloons between the sticks, so that I can put as far as possible much oil into the pails. 
 =======
 As a housewife,I want to know how many balls I can put into the box,so that I can store more things.
@@ -10,3 +7,4 @@ As a housewife,I want to know how many balls I can put into the box,so that I ca
 =======
 As a housewife,I want to know how many balls I can put into the box,so that I can store more things.
 >>>>>>> bc7d0d3f77999c737a21ded173ee44186cb8ccc5
+
