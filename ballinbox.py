@@ -98,14 +98,14 @@ def ball_in_box(m=CIRCLE_NUM, blockers=BLOCKERS):
     return circle  # 返回圆心坐标与半径
 
 
-# test1:
+# test1:第一次测试，设随机障碍点的坐标分别为(0.4,0.4) (0.8,-0.6) (-0.4,-0.3)；圆的个数为4个，返回函数值 
 print(ball_in_box(m=4))
 print(ball_in_box(m=4,blockers=[(0.4,0.4),(0.8,-0.6),(-0.4,-0.3)]))
 
-# test2:
+# test2:第二次测试，设随机障碍点的坐标分别为(-0.5,-0.4) (1,0.5) (-0.2,0.8)；圆的个数为5个，返回函数值
 print(ball_in_box(m=5))
 print(ball_in_box(m=5,blockers=[(-0.5,-0.4),(1,0.5),(-0.2,0.8)]))
 
-#test3:
+#test3:第三次测试，设随机障碍点的坐标分别为(-0.2,0.5) (0.7,0.7) (0.5,0.5)；圆的个数为3个，返回函数值
 print(ball_in_box(m=3))
 print(ball_in_box(m=3,blockers=[(-0.2,0.5),(0.7,0.7),(0.5,0.5)]))
