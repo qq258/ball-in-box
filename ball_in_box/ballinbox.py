@@ -1,8 +1,8 @@
 import numpy as np
 import math
 import random
-import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
+# import matplotlib.pyplot as plt
+# from matplotlib.patches import Circle
 
 MARGIN_LEFT_X = -1  # 左边界横坐标
 MARGIN_RIGHT_X = 1  # 右边界横坐标
@@ -40,8 +40,8 @@ def ball_in_box(m=CIRCLE_NUM, blockers=BLOCKERS):
     center_y = []  # 圆心纵坐标
     radii = []  # 圆的半径
     axis_x = np.linspace(MARGIN_LEFT_X, MARGIN_RIGHT_X,
-                         LENGTH * 500)  # 对长[MARGIN_LEFT_X, MARGIN_RIGHT_X]间隔取LENGTH*10个点
-    axis_y = np.linspace(MARGIN_DOWN_Y, MARGIN_UP_Y, WIDTH * 500)  # 对宽[MARGIN_DOWN_Y, MARGIN_UP_Y]间隔取WIDTH*10个点
+                         LENGTH * 800)  # 对长[MARGIN_LEFT_X, MARGIN_RIGHT_X]间隔取LENGTH*10个点
+    axis_y = np.linspace(MARGIN_DOWN_Y, MARGIN_UP_Y, WIDTH * 800)  # 对宽[MARGIN_DOWN_Y, MARGIN_UP_Y]间隔取WIDTH*10个点
     centers = [(x, y) for x in axis_x
                for y in axis_y]  # 圆心
 
@@ -81,19 +81,19 @@ def ball_in_box(m=CIRCLE_NUM, blockers=BLOCKERS):
     colors = ['blue', 'yellow', 'pink', 'chartreuse', 'darkviolet', 'crimson']
     for i in range(len(radii)):  # 遍历前CIRCLE_NUM个圆
         circle.append((center_x[i], center_y[i], radii[i]))
-        cir_fig.append(Circle(xy=(center_x[i], center_y[i]), radius=radii[i], facecolor=colors[i], alpha=0.5))
+        # cir_fig.append(Circle(xy=(center_x[i], center_y[i]), radius=radii[i], facecolor=colors[i], alpha=0.5))
 
-    fig = plt.figure()
-    ax = fig.add_subplot(111)  # 将画布分割为1行1列，取第1块
-    ax.set_xlim(MARGIN_LEFT_X, MARGIN_RIGHT_X)
-    ax.set_ylim(MARGIN_DOWN_Y, MARGIN_UP_Y)
-    ax.set_aspect(1)  # 坐标轴单位为1
-    ax.plot(blockers_x, blockers_y, 'gx')  # 画障碍点
-    ax.plot(center_x, center_y, 'ro')  # 画圆心
-    # ax.axis([0, LENGTH, 0, WIDTH])
-    for i in range(len(radii)):
-        ax.add_patch(cir_fig[i])  # 画圆
-    plt.show()
+    # fig = plt.figure()
+    # ax = fig.add_subplot(111)  # 将画布分割为1行1列，取第1块
+    # ax.set_xlim(MARGIN_LEFT_X, MARGIN_RIGHT_X)
+    # ax.set_ylim(MARGIN_DOWN_Y, MARGIN_UP_Y)
+    # ax.set_aspect(1)  # 坐标轴单位为1
+    # ax.plot(blockers_x, blockers_y, 'gx')  # 画障碍点
+    # ax.plot(center_x, center_y, 'ro')  # 画圆心
+    # # ax.axis([0, LENGTH, 0, WIDTH])
+    # for i in range(len(radii)):
+    #     ax.add_patch(cir_fig[i])  # 画圆
+    # plt.show()
 
     return circle  # 返回圆心坐标与半径
 
